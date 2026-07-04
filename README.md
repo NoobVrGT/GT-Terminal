@@ -10,7 +10,7 @@ This project is classified as a **CLI Tool** (Command-line application). Althoug
 
 **Other Tools & Libraries (Inferred from functionality):**
 - **System.IO**: Extensively used for file system operations (backup, restore, mod installation, path detection).
-- **System.Net.Http**: Likely used for `downloader.cs` and `Checkupdates.cs` for fetching files and checking for new versions.
+- **System.Net.Http**:used for `downloader.cs` and `Checkupdates.cs` for fetching files and checking for new versions.
 - **System.Diagnostics.Process**: Used by `PowerShellRunner.cs` to execute external processes (PowerShell commands) and potentially by `OpenGTAG.cs` to launch the game.
 - **System.IO.Compression**: Used by `ZipExtractor.cs` for handling compressed mod files.
 
@@ -18,7 +18,7 @@ This project is classified as a **CLI Tool** (Command-line application). Althoug
 
 The repository has a flat structure, with all C# source files and the compiled executable located in the root directory.
 
-- **Entry Point:** `GTTerminal.exe` is the main executable. Given the modular nature of the `.cs` files (e.g., `init.cs`, `Dashboard.cs`, `SystemMenu.cs`), `init.cs` likely handles initial setup and then delegates control to the `Dashboard` or other menu-related classes to present the interactive console interface.
+- **Entry Point:** `GTTerminal.exe` is the main executable. Given the modular nature of the `.cs` files (e.g., `init.cs`, `Dashboard.cs`, `SystemMenu.cs`), `init.cs` handles initial setup and then delegates control to the `Dashboard` or other menu-related classes to present the interactive console interface.
 - **Source Code Organization:** Functionalities are modularized into individual `.cs` files, each seemingly responsible for a specific feature or menu within the terminal application (e.g., `InstallBepInEx.cs`, `ModBrowser.cs`, `Settings.cs`).
 - **Configuration Files:** No explicit configuration files (like `.env`, `appsettings.json`) are detected in the provided file list. Configuration is likely managed within `Settings.cs` and potentially persisted via .NET's application settings or simple file-based storage.
 - **Asset Locations:** No separate asset directories detected, implying any UI elements (like the `StartupLogo.cs`) are generated programmatically or embedded.
